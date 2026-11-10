@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oops.dev | Digital Rescue for Philippine Businesses</title>
+    <meta
+      name="description"
+      content="Rescue slow processes, digitalize old records, and keep business data safe with friendly, custom support from Oops.dev."
+    />
+    <meta name="author" content="Oops.dev" />
+    <meta property="og:title" content="Oops.dev | We Fix Your Oops" />
+    <meta
+      property="og:description"
+      content="Friendly business process rescue and digitalization for Philippine MSMEs and local offices."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/oops-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/oops-logo.png" />
+
+    <!-- Fonts, Favicon & Phosphor Icons Duotone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Open+Sans:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/duotone/style.css"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Compiled Tailwind CSS v4 & Project Stylesheet -->
+    <link rel="stylesheet" href="/src/styles.css" />
+
+    <!-- Kite Runtime via CDN -->
+    <script type="module" src="https://esm.sh/@kitelet/core"></script>
+  </head>
+  <body kite-cloak>
+    <!-- App Configuration -->
+    <kite-config mode="dev" routing="hash"></kite-config>
+
+    <!-- Models -->
+    <kite-include src="/app/models/team.model.html"></kite-include>
+
+    <!-- Routes -->
+    <kite-include src="/app/routes/routes.html"></kite-include>
+
+    <!-- Outlet where active view renders -->
+    <kite-outlet></kite-outlet>
+
+    <!-- Screen Views -->
+    <kite-include src="/app/views/home.view.html"></kite-include>
+    <kite-include src="/app/views/about.view.html"></kite-include>
+
+    <!-- Smooth scrolling helper for in-page anchors -->
+    <script>
+      function handleSectionScroll() {
+        const hash = window.location.hash.replace(/^#\/?/, "");
+        if (["services", "how", "stories", "contact", "home"].includes(hash)) {
+          setTimeout(function () {
+            const el = document.getElementById(hash);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+          }, 80);
+        }
+      }
+      window.addEventListener("hashchange", handleSectionScroll);
+      window.addEventListener("DOMContentLoaded", handleSectionScroll);
+    </script>
+  </body>
+</html>

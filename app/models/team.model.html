@@ -1,0 +1,13 @@
+<kite-model name="team">
+  { active: 0, isPaused: false, members: [ { name: "Eldrex Delos Reyes Bula", role: "CEO & Founder",
+  image: "/eldrexbula.png" }, { name: "Earl Daniel Lazaro", role: "BSIS Developer", image:
+  "/eldrexbula.png" }, { name: "Eulo O. Alicante", role: "BSIS Developer", image: "/eldrexbula.png"
+  }, { name: "Greyven Navarro", role: "BSIS Developer", image: "/eldrexbula.png" }, { name: "John
+  Rence Pablo", role: "BSIS Developer", image: "/eldrexbula.png" }, { name: "Joshua Dotillos", role:
+  "BSIS Developer", image: "/eldrexbula.png" }, { name: "Renzo P. De Villa", role: "BSIS Developer",
+  image: "/eldrexbula.png" }, { name: "Rhyan Maac", role: "BSIS Developer", image: "/eldrexbula.png"
+  } ], prev() { const len = this.members.length; this.active = (this.active - 1 + len) % len; },
+  next() { const len = this.members.length; this.active = (this.active + 1) % len; }, tick() { if
+  (!this.isPaused) { this.next(); } }, setActive(index) { this.active = index; }, getMember(offset)
+  { const len = this.members.length; return this.members[(this.active + offset + len) % len]; } }
+</kite-model>

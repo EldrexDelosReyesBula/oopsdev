@@ -1,0 +1,673 @@
+<kite-view name="home-view">
+  <main class="overflow-hidden bg-background text-foreground" kite-scope="{ menuOpen: false }">
+    <!-- Site Header with Glassmorphism & Micro-interactions -->
+    <header
+      class="glass-nav sticky top-0 z-30 border-b border-border/40 transition-all duration-300"
+    >
+      <div class="section-shell flex h-20 items-center justify-between">
+        <a
+          href="#/"
+          aria-label="Oops.dev home"
+          class="group flex items-center gap-2.5 transition-transform duration-200 hover:scale-[1.02]"
+        >
+          <img
+            src="/oops-logo.svg"
+            alt="Oops.dev logo"
+            class="h-10 w-10 object-contain transition-transform duration-300 group-hover:rotate-6"
+          />
+          <span class="text-2xl font-black tracking-tight text-foreground"
+            >Oops<span class="text-primary font-mono text-xl">.dev</span></span
+          >
+        </a>
+
+        <nav
+          class="hidden items-center gap-8 text-sm font-bold md:flex"
+          aria-label="Main navigation"
+        >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#how"
+            >How it works</a
+          >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#stories"
+            >Stories</a
+          >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#/about"
+            >About Us</a
+          >
+          <a href="mailto:hello@oops.dev" class="btn-rescue h-10 rounded-xl px-5 text-sm shadow-md">
+            Let's talk
+            <i
+              class="ph-duotone ph-arrow-right text-base transition-transform duration-200 group-hover:translate-x-1"
+            ></i>
+          </a>
+        </nav>
+
+        <button
+          class="grid size-11 place-items-center rounded-xl border border-border/80 bg-background/50 hover:bg-muted text-foreground transition-all duration-200 md:hidden cursor-pointer"
+          kite-on-click="menuOpen = !menuOpen"
+          aria-label="Toggle navigation"
+          kite-bind:aria-expanded="menuOpen"
+        >
+          <i
+            class="ph-duotone ph-list text-2xl transition-transform duration-200"
+            kite-class:rotate-90="menuOpen"
+          ></i>
+        </button>
+      </div>
+
+      <!-- Mobile dropdown with slide-down animation -->
+      <nav
+        class="mx-4 mb-4 grid gap-3 rounded-2xl border border-border/60 bg-background/95 p-6 shadow-xl backdrop-blur-xl md:hidden transition-all duration-300"
+        kite-show="menuOpen"
+      >
+        <a
+          href="#services"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          Services
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="#how"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          How it works
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="#stories"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          Stories
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="#/about"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          About Us
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="mailto:hello@oops.dev"
+          class="btn-rescue h-11 w-full rounded-xl text-center font-bold mt-2"
+        >
+          Let's talk <i class="ph-duotone ph-arrow-right text-base ml-1"></i>
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="paper-pattern relative min-h-[760px] pt-12 lg:min-h-[820px] lg:pt-16">
+      <div
+        class="section-shell grid items-center gap-12 py-12 lg:grid-cols-[1.05fr_.95fr] lg:py-20"
+      >
+        <div class="relative z-10 max-w-2xl">
+          <span
+            class="mb-6 inline-flex items-center gap-2 rounded-full border border-sand/30 bg-sand-soft/80 px-4 py-2 text-sm font-bold shadow-xs backdrop-blur-xs transition-transform hover:scale-105"
+          >
+            <i class="ph-duotone ph-sparkle text-primary text-base"></i>
+            Digital rescue for real businesses
+          </span>
+
+          <h1 class="text-5xl font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-8xl">
+            We Fix<br />Your <span class="text-primary relative inline-block">Oops.</span>
+          </h1>
+
+          <p class="mt-7 max-w-xl text-lg leading-8 text-muted-foreground sm:text-xl">
+            Stuck in paper chaos? We rescue slow, manual processes—and keep every record safe while
+            bringing your business into the digital age.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="mailto:hello@oops.dev"
+              class="btn-rescue h-13 rounded-xl px-8 text-base font-bold shadow-lg"
+            >
+              Get Rescued Today
+              <i class="ph-duotone ph-arrow-right text-lg"></i>
+            </a>
+            <a href="#how" class="btn-navy-outline h-13 rounded-xl px-8 text-base font-bold">
+              See How It Works
+            </a>
+          </div>
+
+          <p class="mt-8 flex items-center gap-2 text-sm font-semibold text-foreground/80">
+            <i class="ph-duotone ph-shield-check text-secondary text-2xl"></i>
+            No pressure. No jargon. Just practical help.
+          </p>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-2xl">
+          <!-- Ambient glowing background backdrop -->
+          <div
+            class="ambient-glow absolute -inset-4 rounded-full bg-gradient-to-tr from-primary/15 via-sand/20 to-secondary/20 blur-3xl -z-10"
+          ></div>
+          <div
+            class="absolute inset-x-12 bottom-6 h-12 rounded-[50%] bg-foreground/15 blur-xl"
+          ></div>
+          <img
+            src="/oops-rescue-hero.svg"
+            width="1400"
+            height="1100"
+            alt="A lifebuoy rescuing paper records into an organized digital laptop"
+            class="buoy-float relative w-full drop-shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-foreground py-20 text-background sm:py-28 relative overflow-hidden">
+      <div class="section-shell relative z-10">
+        <div class="max-w-2xl">
+          <p class="mb-3 font-bold uppercase tracking-widest text-sand">Paper chaos is real</p>
+          <h2 class="text-4xl font-black sm:text-5xl tracking-tight">Sound Familiar?</h2>
+          <p class="mt-4 text-lg text-background/75">
+            You're not alone. Many businesses are stuck doing work the hard way.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article
+            class="group rounded-2xl border border-background/15 bg-background/5 p-8 backdrop-blur-xs transition-all duration-300 hover:-translate-y-2 hover:bg-background/10 hover:border-sand/40 hover:shadow-xl"
+          >
+            <div
+              class="grid size-14 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+            >
+              <i class="ph-duotone ph-book-open-text text-2xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Slow Processes</h3>
+            <p class="mt-3 leading-7 text-background/70">
+              Hours spent handwriting records that should take minutes.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-background/15 bg-background/5 p-8 backdrop-blur-xs transition-all duration-300 hover:-translate-y-2 hover:bg-background/10 hover:border-sand/40 hover:shadow-xl"
+          >
+            <div
+              class="grid size-14 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+            >
+              <i class="ph-duotone ph-x-circle text-2xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Costly Errors</h3>
+            <p class="mt-3 leading-7 text-background/70">
+              One wrong entry can mess up your whole inventory or report.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-background/15 bg-background/5 p-8 backdrop-blur-xs transition-all duration-300 hover:-translate-y-2 hover:bg-background/10 hover:border-sand/40 hover:shadow-xl"
+          >
+            <div
+              class="grid size-14 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+            >
+              <i class="ph-duotone ph-warning-octagon text-2xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Fear of Losing Data</h3>
+            <p class="mt-3 leading-7 text-background/70">
+              You want to go digital, but you're scared to lose years of hard work.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="how" class="py-20 sm:py-28 relative">
+      <div class="section-shell text-center">
+        <p class="font-bold uppercase tracking-widest text-primary">Our promise</p>
+        <h2 class="mx-auto mt-3 max-w-3xl text-4xl font-black sm:text-5xl tracking-tight">
+          We Don't Just Digitalize.<br />We Rescue.
+        </h2>
+        <p class="mt-4 text-lg text-muted-foreground">
+          Oops.dev is your business process rescue team.
+        </p>
+
+        <div class="relative mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div
+            class="absolute left-[18%] right-[18%] top-12 hidden border-t-2 border-dashed border-secondary/40 md:block"
+          ></div>
+
+          <article class="group relative transition-all duration-300 hover:-translate-y-2">
+            <div
+              class="relative z-10 mx-auto grid size-24 place-items-center rounded-full border-8 border-background bg-secondary text-secondary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:shadow-secondary/30"
+            >
+              <i class="ph-duotone ph-magnifying-glass text-3xl"></i>
+              <b
+                class="absolute -right-1 -top-1 grid size-8 place-items-center rounded-full bg-sand text-sm font-extrabold text-accent-foreground shadow-md"
+                >1</b
+              >
+            </div>
+            <h3 class="mt-6 text-2xl font-black tracking-tight">Rescue</h3>
+            <p class="mx-auto mt-3 max-w-sm leading-7 text-muted-foreground">
+              We assess your workflow and collect all your records—no matter how messy.
+            </p>
+          </article>
+
+          <article class="group relative transition-all duration-300 hover:-translate-y-2">
+            <div
+              class="relative z-10 mx-auto grid size-24 place-items-center rounded-full border-8 border-background bg-secondary text-secondary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:shadow-secondary/30"
+            >
+              <i
+                class="ph-duotone ph-gear-six text-3xl transition-transform duration-700 group-hover:rotate-180"
+              ></i>
+              <b
+                class="absolute -right-1 -top-1 grid size-8 place-items-center rounded-full bg-sand text-sm font-extrabold text-accent-foreground shadow-md"
+                >2</b
+              >
+            </div>
+            <h3 class="mt-6 text-2xl font-black tracking-tight">Digitalize</h3>
+            <p class="mx-auto mt-3 max-w-sm leading-7 text-muted-foreground">
+              We scan, encode, and build a custom system tailored to your exact needs.
+            </p>
+          </article>
+
+          <article class="group relative transition-all duration-300 hover:-translate-y-2">
+            <div
+              class="relative z-10 mx-auto grid size-24 place-items-center rounded-full border-8 border-background bg-secondary text-secondary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:shadow-secondary/30"
+            >
+              <i class="ph-duotone ph-database text-3xl"></i>
+              <b
+                class="absolute -right-1 -top-1 grid size-8 place-items-center rounded-full bg-sand text-sm font-extrabold text-accent-foreground shadow-md"
+                >3</b
+              >
+            </div>
+            <h3 class="mt-6 text-2xl font-black tracking-tight">Keep</h3>
+            <p class="mx-auto mt-3 max-w-sm leading-7 text-muted-foreground">
+              Your old data stays safe, searchable, and accessible. Nothing is lost.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-muted/70 py-20 sm:py-28 relative">
+      <div class="section-shell">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-bold uppercase tracking-widest text-primary">Practical support</p>
+            <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">What We Do</h2>
+          </div>
+          <p class="max-w-sm text-lg text-muted-foreground">
+            Custom solutions for real business problems, explained in plain language.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-6">
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-secondary/50 lg:col-span-3"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-wrench text-3xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Business Process Rescue</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              We analyze your current workflow, find the bottlenecks, and fix them.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-secondary/50 lg:col-span-3"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-book-open-text text-3xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Document Digitalization</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              Handwritten records, old logbooks, receipts—scanned, encoded, and organized.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-secondary/50 lg:col-span-2"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-cpu text-3xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Custom System Development</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              We build inventory, sales, HR, or reporting systems that fit your business.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-secondary/50 lg:col-span-2"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-lock-key text-3xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Data Preservation</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              Your legacy data is safely stored, backed up, and easy to access.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-secondary/50 lg:col-span-2"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-users-three text-3xl"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold tracking-tight">Training & Support</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              We teach your team how to use the new system—no tech skills needed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section id="stories" class="py-20 sm:py-28 relative">
+      <div class="section-shell">
+        <div class="text-center">
+          <p class="font-bold uppercase tracking-widest text-primary">Why we exist</p>
+          <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">
+            Real Stories. Real Rescues.
+          </h2>
+          <p class="mt-4 text-lg text-muted-foreground">
+            We've seen the struggle—and the relief when the work gets easier.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <article
+            class="relative overflow-hidden rounded-2xl border border-border/80 border-l-8 border-l-sand bg-background p-8 sm:p-10 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <span class="text-6xl font-black leading-none text-sand/40 select-none">&ldquo;</span>
+            <p class="-mt-4 text-xl font-bold leading-8 tracking-tight">
+              Hundreds of old logbooks transferred by hand. It took weeks.
+            </p>
+            <h3 class="mt-6 text-lg font-black flex items-center gap-2">
+              <span class="text-2xl">🏛️</span> Municipal Office
+            </h3>
+            <div class="mt-6 border-t border-border/60 pt-5">
+              <p class="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                What we fixed
+              </p>
+              <div class="space-y-2.5">
+                <p class="flex items-center gap-2.5 text-sm font-semibold">
+                  <i class="ph-duotone ph-check-circle text-secondary text-lg"></i>
+                  Records digitized in days
+                </p>
+                <p class="flex items-center gap-2.5 text-sm font-semibold">
+                  <i class="ph-duotone ph-check-circle text-secondary text-lg"></i>
+                  Staff can search instantly
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="relative overflow-hidden rounded-2xl border border-border/80 border-l-8 border-l-sand bg-background p-8 sm:p-10 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <span class="text-6xl font-black leading-none text-sand/40 select-none">&ldquo;</span>
+            <p class="-mt-4 text-xl font-bold leading-8 tracking-tight">
+              50 handwritten record books for one annual report.
+            </p>
+            <h3 class="mt-6 text-lg font-black flex items-center gap-2">
+              <span class="text-2xl">🏪</span> Electronics Shop
+            </h3>
+            <div class="mt-6 border-t border-border/60 pt-5">
+              <p class="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                What we fixed
+              </p>
+              <div class="space-y-2.5">
+                <p class="flex items-center gap-2.5 text-sm font-semibold">
+                  <i class="ph-duotone ph-check-circle text-secondary text-lg"></i>
+                  Reports generated in seconds
+                </p>
+                <p class="flex items-center gap-2.5 text-sm font-semibold">
+                  <i class="ph-duotone ph-check-circle text-secondary text-lg"></i>
+                  Zero calculation errors
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Trust Us Section -->
+    <section class="bg-teal-soft/80 py-20 sm:py-28 relative">
+      <div class="section-shell">
+        <div class="max-w-2xl">
+          <p class="font-bold uppercase tracking-widest text-primary">
+            A better kind of tech partner
+          </p>
+          <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">
+            Why Businesses Trust Us
+          </h2>
+          <p class="mt-4 text-lg text-muted-foreground">
+            We're not just tech people. We're your rescue team.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <article
+            class="group rounded-2xl bg-background/60 p-6 backdrop-blur-xs transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:bg-background"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-shield-check text-3xl"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold tracking-tight">We Care About Your Data</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              Your records are treated like gold. Nothing gets lost.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl bg-background/60 p-6 backdrop-blur-xs transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:bg-background"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-wrench text-3xl"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold tracking-tight">
+              Customized, Not Cookie-Cutter
+            </h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              We build for your workflow—not someone else's.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl bg-background/60 p-6 backdrop-blur-xs transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:bg-background"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-chat-centered-dots text-3xl"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold tracking-tight">No Tech Jargon</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              We explain everything in plain, simple language.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl bg-background/60 p-6 backdrop-blur-xs transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:bg-background"
+          >
+            <div
+              class="flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-clock text-3xl"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold tracking-tight">Fast & Non-Disruptive</h3>
+            <p class="mt-3 leading-7 text-muted-foreground">
+              We work quickly so your business keeps running.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Placeholder -->
+    <section class="bg-secondary py-20 text-secondary-foreground sm:py-24">
+      <div class="section-shell text-center">
+        <h2 class="text-4xl font-black sm:text-5xl tracking-tight">What Our Clients Say</h2>
+        <p class="mt-4 text-lg text-secondary-foreground/80">Coming soon.</p>
+        <div class="mx-auto mt-10 flex max-w-xl items-center justify-center gap-4">
+          <span class="h-px flex-1 bg-secondary-foreground/30"></span>
+          <img
+            src="/oops-logo.svg"
+            alt="Oops.dev"
+            class="h-9 w-auto brightness-0 invert opacity-70 transition-transform duration-300 hover:scale-110"
+          />
+          <span class="h-px flex-1 bg-secondary-foreground/30"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-foreground py-20 text-center text-background sm:py-28 relative">
+      <div class="section-shell">
+        <div class="buoy-float mx-auto mb-7 w-fit">
+          <img
+            src="/oops-logo.svg"
+            alt="Oops.dev"
+            class="h-16 w-auto brightness-0 invert drop-shadow-lg"
+          />
+        </div>
+        <h2 class="text-4xl font-black sm:text-6xl tracking-tight">
+          Ready to Rescue<br />Your Business?
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl text-lg text-background/75">
+          Let's talk about your process. No pressure, no jargon—just help.
+        </p>
+        <a
+          href="mailto:hello@oops.dev"
+          class="btn-rescue mt-9 h-13 rounded-xl px-8 text-base font-bold shadow-xl"
+        >
+          Get a Free Consultation
+          <i class="ph-duotone ph-arrow-right text-lg"></i>
+        </a>
+        <p class="mt-6 text-sm">
+          Or email us at
+          <a class="font-bold text-sand hover:underline" href="mailto:hello@oops.dev"
+            >hello@oops.dev</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="border-t border-background/15 bg-foreground py-14 text-background">
+      <div class="section-shell grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="#/" aria-label="Oops.dev home" class="flex items-center gap-2">
+            <img
+              src="/oops-logo.svg"
+              alt="Oops logo"
+              class="h-9 w-9 object-contain brightness-0 invert"
+            />
+            <span class="text-2xl font-black tracking-tight text-background">Oops</span>
+          </a>
+          <p class="mt-4 font-bold text-background/70">Rescue. Digitalize. Keep.</p>
+        </div>
+
+        <div>
+          <p class="font-display font-extrabold text-sm uppercase tracking-wider text-sand">
+            Explore
+          </p>
+          <nav class="mt-4 grid gap-2.5 text-sm text-background/75 font-medium">
+            <a
+              href="#/"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Services</a
+            >
+            <a
+              href="#how"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >How it works</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Contact</a
+            >
+            <a
+              href="#/about"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >About Us</a
+            >
+          </nav>
+        </div>
+
+        <div>
+          <p class="font-display font-extrabold text-sm uppercase tracking-wider text-sand">
+            Say hello
+          </p>
+          <a
+            class="mt-4 block text-sm text-background/75 hover:text-background hover:underline font-medium"
+            href="mailto:hello@oops.dev"
+            >hello@oops.dev</a
+          >
+          <p class="mt-2 text-sm text-background/75">Philippines</p>
+          <div class="mt-5 flex gap-3">
+            <a
+              aria-label="Facebook"
+              href="#"
+              class="grid size-10 place-items-center rounded-xl bg-background/10 text-background/75 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
+            >
+              <i class="ph-duotone ph-facebook-logo text-xl"></i>
+            </a>
+            <a
+              aria-label="Instagram"
+              href="#"
+              class="grid size-10 place-items-center rounded-xl bg-background/10 text-background/75 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
+            >
+              <i class="ph-duotone ph-instagram-logo text-xl"></i>
+            </a>
+            <a
+              aria-label="LinkedIn"
+              href="#"
+              class="grid size-10 place-items-center rounded-xl bg-background/10 text-background/75 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
+            >
+              <i class="ph-duotone ph-linkedin-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="section-shell mt-12 border-t border-background/15 pt-6 text-xs text-background/55"
+      >
+        © 2026 Oops.dev. All rights reserved.
+      </div>
+    </footer>
+  </main>
+</kite-view>

@@ -1,0 +1,703 @@
+<kite-view name="about-view" model="team">
+  <div class="min-h-screen bg-background text-foreground">
+    <!-- Top bar with Glassmorphic Blur -->
+    <header
+      class="glass-nav sticky top-0 z-30 border-b border-border/40 transition-all duration-300"
+    >
+      <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <a
+          href="#/"
+          aria-label="Oops.dev home"
+          class="group flex items-center gap-2.5 transition-transform duration-200 hover:scale-[1.02]"
+        >
+          <img
+            src="/oops-logo.svg"
+            alt="Oops logo"
+            class="h-8 w-8 object-contain transition-transform duration-300 group-hover:rotate-6"
+          />
+          <span class="text-xl font-black tracking-tight"
+            >Oops<span class="text-primary font-mono text-base">.dev</span></span
+          >
+        </a>
+        <a
+          href="#/"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-xs font-bold cursor-pointer transition-all duration-200 border border-input bg-background/80 px-4 py-2 shadow-xs hover:bg-muted hover:border-foreground/30 hover:-translate-y-0.5 active:translate-y-0"
+        >
+          <i class="ph-duotone ph-arrow-left text-sm text-primary"></i>
+          Back to Home
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-foreground py-20 text-background sm:py-24 relative overflow-hidden">
+      <div
+        class="ambient-glow absolute -top-24 -right-24 size-96 rounded-full bg-primary/10 blur-3xl -z-10"
+      ></div>
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 relative z-10">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-sand/30 bg-sand/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-sand"
+        >
+          <i class="ph-duotone ph-sparkle text-sm"></i>
+          About Our Mission
+        </span>
+        <h1
+          class="mt-6 max-w-3xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+        >
+          We Fix Your <span class="text-primary">Oops.</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-background/75 sm:text-xl">
+          Oops.dev is a student-founded startup born from a Technopreneurship project under the
+          <strong class="text-background font-black"
+            >Bachelor of Science in Information Systems (BSIS)</strong
+          >
+          program. We help Philippine MSMEs and local government offices escape paper chaos without
+          losing the records that matter to them.
+        </p>
+        <div
+          class="mt-8 max-w-2xl rounded-2xl border border-background/15 bg-background/10 p-6 sm:p-7 backdrop-blur-xs shadow-lg"
+        >
+          <p class="text-background/85 leading-7 sm:text-base">
+            <strong class="text-sand font-bold">&ldquo;Oops&rdquo;</strong> acknowledges that many
+            businesses did not plan to get stuck in paper chaos — it just happened over time.
+            <strong class="text-sand font-bold">&ldquo;.dev&rdquo;</strong> represents our
+            commitment to using technology to solve real-world problems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 sm:py-28 relative">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="text-center">
+          <p class="font-bold uppercase tracking-widest text-primary">Our Story</p>
+          <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">
+            The Stories That Started It All
+          </h2>
+          <p class="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+            We did not have to look far to find the problem. We found it right in front of us.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-border/80 bg-background p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 hover:border-primary/30"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary shadow-xs"
+              >
+                <i class="ph-duotone ph-buildings text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-extrabold tracking-tight">The Municipal Office</h3>
+            </div>
+            <div class="mt-6 space-y-4 text-sm leading-7 text-muted-foreground">
+              <div>
+                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
+                  The Task
+                </p>
+                <p>
+                  Manually transfer information from hundreds of old logbooks into new handwritten
+                  ledgers.
+                </p>
+              </div>
+              <div>
+                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
+                  The Reality
+                </p>
+                <p>
+                  It was tedious, slow, and prone to errors. A single mistake meant starting over.
+                  Weeks of work could have been reduced to days with the right digital tools.
+                </p>
+              </div>
+            </div>
+            <div
+              class="mt-6 flex items-center gap-2.5 rounded-xl bg-primary/10 px-5 py-4 text-primary font-bold text-sm"
+            >
+              <i class="ph-duotone ph-sparkle text-lg shrink-0"></i>
+              <span>Our Realization: There has to be a better way.</span>
+            </div>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-border/80 bg-background p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 hover:border-primary/30"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary shadow-xs"
+              >
+                <i class="ph-duotone ph-storefront text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-extrabold tracking-tight">The Electronics Shop</h3>
+            </div>
+            <div class="mt-6 space-y-4 text-sm leading-7 text-muted-foreground">
+              <div>
+                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
+                  The Task
+                </p>
+                <p>
+                  Prepare the annual profit report by reading through approximately 50 handwritten
+                  record books of daily sales and operations.
+                </p>
+              </div>
+              <div>
+                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
+                  The Reality
+                </p>
+                <p>
+                  It took days to compile. The risk of calculation errors was high. The owner could
+                  not make quick business decisions because the data was buried in paper.
+                </p>
+              </div>
+            </div>
+            <div
+              class="mt-6 flex items-center gap-2.5 rounded-xl bg-primary/10 px-5 py-4 text-primary font-bold text-sm"
+            >
+              <i class="ph-duotone ph-sparkle text-lg shrink-0"></i>
+              <span
+                >Our Realization: Business owners need instant access to their own data, not hours
+                of manual searching.</span
+              >
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 rounded-3xl border border-border/80 bg-muted/60 p-8 sm:p-10 shadow-xs">
+          <h3 class="text-2xl font-black tracking-tight">What These Stories Taught Us</h3>
+          <ul class="mt-6 space-y-3.5">
+            <li class="flex items-start gap-3.5 text-base leading-7 text-muted-foreground">
+              <i class="ph-duotone ph-check-circle text-secondary text-xl shrink-0 mt-0.5"></i>
+              <span
+                ><strong class="text-foreground">Manual processes waste time and money.</strong>
+                Repetitive physical record keeping consumes productive business hours.</span
+              >
+            </li>
+            <li class="flex items-start gap-3.5 text-base leading-7 text-muted-foreground">
+              <i class="ph-duotone ph-check-circle text-secondary text-xl shrink-0 mt-0.5"></i>
+              <span
+                ><strong class="text-foreground">Errors are inevitable</strong> when humans do
+                repetitive handwriting and calculations without validation.</span
+              >
+            </li>
+            <li class="flex items-start gap-3.5 text-base leading-7 text-muted-foreground">
+              <i class="ph-duotone ph-check-circle text-secondary text-xl shrink-0 mt-0.5"></i>
+              <span
+                ><strong class="text-foreground">Owners hold on to manual systems</strong> because
+                they are afraid of losing decades of irreplaceable historical data.</span
+              >
+            </li>
+          </ul>
+          <blockquote class="mt-8 border-l-4 border-primary pl-6">
+            <p class="text-xl sm:text-2xl font-black text-foreground">
+              &ldquo;We do not just need to digitalize. We need to
+              <span class="text-primary">rescue.</span>&rdquo;
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-muted/70 py-20 sm:py-28 relative">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <p class="font-bold uppercase tracking-widest text-primary">What We Do</p>
+        <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">Our Services</h2>
+        <p class="mt-4 max-w-xl text-lg text-muted-foreground">
+          Business Process Rescue, Digitalization, and Custom System Development designed for
+          Philippine MSMEs and local government offices.
+        </p>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2">
+          <article
+            class="group flex gap-5 rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-secondary/40"
+          >
+            <div
+              class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-wrench text-3xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Business Process Rescue</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">
+                We analyze current workflows, identify bottlenecks, and design better, faster
+                processes.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group flex gap-5 rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-secondary/40"
+          >
+            <div
+              class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-book-open-text text-3xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Document Digitalization</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">
+                We scan, encode, and organize handwritten records, old logbooks, receipts, and
+                files.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group flex gap-5 rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-secondary/40"
+          >
+            <div
+              class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-cpu text-3xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Custom System Development</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">
+                We build tailored inventory, sales, HR, or reporting systems that fit each client's
+                unique needs.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group flex gap-5 rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-secondary/40"
+          >
+            <div
+              class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-lock-key text-3xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Data Preservation</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">
+                We ensure legacy data is safely stored, backed up, and easy to access. Nothing is
+                ever lost.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group flex gap-5 rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-secondary/40 sm:col-span-2"
+          >
+            <div
+              class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-foreground shadow-xs"
+            >
+              <i class="ph-duotone ph-graduation-cap text-3xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Training and Support</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">
+                We teach teams how to use their new systems confidently. No tech skills required.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="bg-foreground py-20 text-background sm:py-28 relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid gap-12 md:grid-cols-2">
+          <div
+            class="rounded-3xl border border-background/15 bg-background/5 p-8 sm:p-10 backdrop-blur-xs"
+          >
+            <div
+              class="flex size-12 items-center justify-center rounded-xl bg-primary/20 text-primary mb-4"
+            >
+              <i class="ph-duotone ph-target text-2xl"></i>
+            </div>
+            <p class="font-bold uppercase tracking-widest text-primary text-xs">Our Mission</p>
+            <h2 class="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Why We Exist</h2>
+            <p class="mt-5 text-lg leading-8 text-background/75">
+              To rescue Philippine MSMEs and government offices from slow, manual processes by
+              providing customized digitalization services that modernize operations while
+              preserving the integrity and accessibility of historical data.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-background/15 bg-background/5 p-8 sm:p-10 backdrop-blur-xs"
+          >
+            <div
+              class="flex size-12 items-center justify-center rounded-xl bg-secondary/20 text-secondary mb-4"
+            >
+              <i class="ph-duotone ph-compass text-2xl"></i>
+            </div>
+            <p class="font-bold uppercase tracking-widest text-secondary text-xs">Our Vision</p>
+            <h2 class="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Where We Are Going</h2>
+            <p class="mt-5 text-lg leading-8 text-background/75">
+              To become the leading Business Process Rescue partner in the Philippines — where no
+              business is left behind in the digital age, and no handwritten record is ever lost or
+              abandoned.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- R.E.S.C.U.E. Values -->
+    <section class="py-20 sm:py-28 relative">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="text-center">
+          <p class="font-bold uppercase tracking-widest text-primary">Core Values</p>
+          <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">R.E.S.C.U.E.</h2>
+          <p class="mt-4 text-lg text-muted-foreground">
+            The principles behind every project we take on.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-5xl font-black text-primary leading-none">R</span>
+              <i
+                class="ph-duotone ph-shield-check text-3xl text-primary/70 transition-transform duration-300 group-hover:scale-125"
+              ></i>
+            </div>
+            <h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground">Reliability</h3>
+            <p class="mt-3 text-sm leading-7 text-muted-foreground">
+              We deliver systems that work consistently and accurately, earning the trust of our
+              clients.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-5xl font-black text-primary leading-none">E</span>
+              <i
+                class="ph-duotone ph-heart text-3xl text-primary/70 transition-transform duration-300 group-hover:scale-125"
+              ></i>
+            </div>
+            <h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground">Empathy</h3>
+            <p class="mt-3 text-sm leading-7 text-muted-foreground">
+              We understand the emotional attachment owners have to their legacy records; we treat
+              their data with care and respect.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-5xl font-black text-primary leading-none">S</span>
+              <i
+                class="ph-duotone ph-sparkle text-3xl text-primary/70 transition-transform duration-300 group-hover:scale-125"
+              ></i>
+            </div>
+            <h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground">Simplicity</h3>
+            <p class="mt-3 text-sm leading-7 text-muted-foreground">
+              We make digitalization easy to understand and use, even for non-tech-savvy business
+              owners.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-5xl font-black text-primary leading-none">C</span>
+              <i
+                class="ph-duotone ph-sliders text-3xl text-primary/70 transition-transform duration-300 group-hover:scale-125"
+              ></i>
+            </div>
+            <h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground">
+              Customization
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-muted-foreground">
+              We do not believe in one-size-fits-all; every system is tailored to the client's
+              unique workflow.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-5xl font-black text-primary leading-none">U</span>
+              <i
+                class="ph-duotone ph-lightning text-3xl text-primary/70 transition-transform duration-300 group-hover:scale-125"
+              ></i>
+            </div>
+            <h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground">Urgency</h3>
+            <p class="mt-3 text-sm leading-7 text-muted-foreground">
+              We value the client's time; we rescue processes quickly to minimize disruption to
+              their daily operations.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-border/80 bg-background p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/40"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-5xl font-black text-primary leading-none">E</span>
+              <i
+                class="ph-duotone ph-medal text-3xl text-primary/70 transition-transform duration-300 group-hover:scale-125"
+              ></i>
+            </div>
+            <h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground">Excellence</h3>
+            <p class="mt-3 text-sm leading-7 text-muted-foreground">
+              We hold our work to the highest standard — accurate data conversion, clean code, and
+              polished systems.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Different -->
+    <section class="bg-muted/60 py-20 sm:py-28 relative">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <p class="font-bold uppercase tracking-widest text-primary">Why We Are Different</p>
+        <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">Oops vs. Typical IT</h2>
+
+        <div
+          class="mt-10 overflow-x-auto rounded-3xl border border-border/80 bg-background shadow-md"
+        >
+          <div class="min-w-[560px]">
+            <div
+              class="grid grid-cols-2 border-b border-border/80 bg-muted/40 px-6 py-4 text-sm font-black uppercase tracking-wider"
+            >
+              <span class="text-muted-foreground">Typical IT Company</span>
+              <span class="text-primary flex items-center gap-1.5">
+                <i class="ph-duotone ph-shield-check text-base"></i>
+                Oops.dev Rescue Approach
+              </span>
+            </div>
+            <div
+              class="grid grid-cols-2 border-b border-border/50 px-6 py-4 text-sm hover:bg-muted/20 transition-colors"
+            >
+              <span class="pr-4 text-muted-foreground">Builds new software from scratch</span>
+              <span class="font-semibold text-foreground flex items-center gap-2">
+                <i class="ph-duotone ph-check-circle text-secondary text-base shrink-0"></i>
+                Rescues and enhances existing processes and data
+              </span>
+            </div>
+            <div
+              class="grid grid-cols-2 border-b border-border/50 px-6 py-4 text-sm bg-muted/10 hover:bg-muted/20 transition-colors"
+            >
+              <span class="pr-4 text-muted-foreground">Focuses on the future only</span>
+              <span class="font-semibold text-foreground flex items-center gap-2">
+                <i class="ph-duotone ph-check-circle text-secondary text-base shrink-0"></i>
+                Bridges the past and the future
+              </span>
+            </div>
+            <div
+              class="grid grid-cols-2 border-b border-border/50 px-6 py-4 text-sm hover:bg-muted/20 transition-colors"
+            >
+              <span class="pr-4 text-muted-foreground">Uses technical jargon</span>
+              <span class="font-semibold text-foreground flex items-center gap-2">
+                <i class="ph-duotone ph-check-circle text-secondary text-base shrink-0"></i>
+                Speaks in plain, simple language
+              </span>
+            </div>
+            <div
+              class="grid grid-cols-2 border-b border-border/50 px-6 py-4 text-sm bg-muted/10 hover:bg-muted/20 transition-colors"
+            >
+              <span class="pr-4 text-muted-foreground">Offers one-size-fits-all solutions</span>
+              <span class="font-semibold text-foreground flex items-center gap-2">
+                <i class="ph-duotone ph-check-circle text-secondary text-base shrink-0"></i>
+                Builds fully customized systems
+              </span>
+            </div>
+            <div class="grid grid-cols-2 px-6 py-4 text-sm hover:bg-muted/20 transition-colors">
+              <span class="pr-4 text-muted-foreground">May overlook old records</span>
+              <span class="font-semibold text-foreground flex items-center gap-2">
+                <i class="ph-duotone ph-check-circle text-secondary text-base shrink-0"></i>
+                Treats legacy data as gold — nothing is lost
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Carousel with Enhanced Responsive Polish -->
+    <section class="py-20 sm:py-28 relative">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="font-bold uppercase tracking-widest text-primary">Our Team</p>
+            <h2 class="mt-3 text-4xl font-black leading-tight sm:text-5xl tracking-tight">
+              Built by BSIS Students
+            </h2>
+            <p class="mt-4 max-w-lg text-lg leading-8 text-muted-foreground">
+              Oops.dev is proudly developed by
+              <strong class="text-foreground">BSIS students</strong> as part of our
+              Technopreneurship journey — learning by doing, building solutions that matter.
+            </p>
+          </div>
+          <div class="flex shrink-0 gap-3">
+            <button
+              id="team-prev"
+              kite-on-click="prev()"
+              aria-label="Previous team member"
+              class="flex size-12 items-center justify-center rounded-2xl border border-border/80 bg-background shadow-xs transition-all duration-200 hover:bg-muted hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <i class="ph-duotone ph-caret-left text-xl text-foreground"></i>
+            </button>
+            <button
+              id="team-next"
+              kite-on-click="next()"
+              aria-label="Next team member"
+              class="flex size-12 items-center justify-center rounded-2xl border border-border/80 bg-background shadow-xs transition-all duration-200 hover:bg-muted hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <i class="ph-duotone ph-caret-right text-xl text-foreground"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cards — pause auto-scroll on hover -->
+        <div
+          class="flex items-center justify-center gap-4 sm:gap-6 py-4"
+          kite-on-mouseenter="isPaused = true"
+          kite-on-mouseleave="isPaused = false"
+          kite-poll:3s="tick()"
+        >
+          <!-- Left card (-1 offset) -->
+          <div
+            class="relative z-0 w-40 sm:w-52 overflow-hidden rounded-3xl opacity-50 transition-all duration-500 scale-95 hover:opacity-75 cursor-pointer"
+            style="aspect-ratio: 3 / 4"
+            kite-on-click="prev()"
+          >
+            <img
+              kite-bind:src="getMember(-1).image"
+              kite-bind:alt="getMember(-1).name"
+              class="h-full w-full object-cover"
+            />
+          </div>
+
+          <!-- Center card (0 offset) -->
+          <div
+            class="relative z-10 w-56 sm:w-68 overflow-hidden rounded-3xl shadow-2xl ring-4 ring-primary/30 transition-all duration-500 scale-100"
+            style="aspect-ratio: 3 / 4"
+          >
+            <img
+              kite-bind:src="getMember(0).image"
+              kite-bind:alt="getMember(0).name"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-6 pb-6 pt-12"
+            >
+              <p
+                class="text-xl font-black text-white tracking-tight"
+                kite-text="getMember(0).name"
+              ></p>
+              <p class="text-sm font-semibold text-sand" kite-text="getMember(0).role"></p>
+            </div>
+          </div>
+
+          <!-- Right card (1 offset) -->
+          <div
+            class="relative z-0 w-40 sm:w-52 overflow-hidden rounded-3xl opacity-50 transition-all duration-500 scale-95 hover:opacity-75 cursor-pointer"
+            style="aspect-ratio: 3 / 4"
+            kite-on-click="next()"
+          >
+            <img
+              kite-bind:src="getMember(1).image"
+              kite-bind:alt="getMember(1).name"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Dot indicators with smooth spring widths -->
+        <div class="mt-8 flex justify-center gap-2.5">
+          <button
+            kite-for="(m, i) in members"
+            kite-bind:aria-label="'Go to member ' + (i + 1)"
+            kite-class:w-8="i === active"
+            kite-class:opacity-100="i === active"
+            kite-class:w-3="i !== active"
+            kite-class:opacity-30="i !== active"
+            class="h-3 rounded-full bg-primary transition-all duration-300 hover:scale-110 cursor-pointer"
+            kite-on-click="setActive(i)"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section class="bg-foreground py-24 text-background sm:py-28 relative">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="text-center">
+          <span
+            class="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-2 text-sm font-bold text-primary"
+          >
+            <i class="ph-duotone ph-envelope-simple text-base"></i>
+            Get In Touch
+          </span>
+          <h2 class="mt-5 text-4xl font-black sm:text-5xl lg:text-6xl tracking-tight">
+            Ready to Fix Your <span class="text-primary">Oops?</span>
+          </h2>
+          <p class="mx-auto mt-5 max-w-lg text-lg text-background/70 leading-8">
+            Open for student projects, MSME consultations, and academic partnerships. We reply
+            within 24 hours — no sales pitch, just an honest conversation.
+          </p>
+        </div>
+
+        <div class="mx-auto mt-10 flex max-w-lg flex-col gap-4 sm:flex-row">
+          <a
+            href="mailto:hello@oops.dev"
+            class="group flex flex-1 items-center gap-4 rounded-2xl border border-background/15 bg-background/10 px-5 py-4 transition-all duration-200 hover:bg-background/20 hover:-translate-y-0.5"
+          >
+            <div
+              class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary transition-transform duration-200 group-hover:scale-110"
+            >
+              <i class="ph-duotone ph-envelope text-2xl"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-background/50">Email</p>
+              <p class="font-semibold text-background">hello@oops.dev</p>
+            </div>
+          </a>
+          <div
+            class="flex flex-1 items-center gap-4 rounded-2xl border border-background/15 bg-background/10 px-5 py-4"
+          >
+            <div
+              class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary/20 text-secondary"
+            >
+              <i class="ph-duotone ph-map-pin text-2xl"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-background/50">Location</p>
+              <p class="font-semibold text-background">Philippines</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="mailto:hello@oops.dev"
+            class="btn-rescue h-13 rounded-2xl px-9 text-base font-bold shadow-xl"
+          >
+            Get Rescued Today
+            <i class="ph-duotone ph-arrow-right text-lg"></i>
+          </a>
+          <a
+            href="#/"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl border-2 border-background/60 bg-transparent px-8 h-13 text-base font-bold text-background transition-all duration-200 hover:bg-background/20 hover:border-background hover:-translate-y-0.5 cursor-pointer"
+          >
+            See What We Do
+          </a>
+        </div>
+
+        <p class="mt-12 text-center text-xs font-bold uppercase tracking-widest text-background/40">
+          Rescue. Digitalize. Keep. &mdash; Oops.dev
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-border py-8 text-center text-xs text-muted-foreground">
+      &copy; 2026 Oops.dev. All rights reserved.
+      <span class="mx-2 opacity-40">&middot;</span>
+      <a href="#/" class="hover:text-foreground font-semibold hover:underline transition-colors"
+        >Home</a
+      >
+    </footer>
+  </div>
+</kite-view>
