@@ -295,3 +295,27 @@ kite-outlet {
     animation: buoy-float 5s ease-in-out infinite;
   }
 }
+
+/* Carousel Dot Indicators */
+.carousel-dot {
+  display: inline-block;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  opacity: 0.3;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  opacity: 0.7;
+  transform: scale(1.15);
+}
+
+.carousel-dot.active {
+  width: 2rem;
+  opacity: 1;
+}

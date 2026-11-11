@@ -54,10 +54,11 @@ Defined in `src/styles.css`. Never add inline styles or ad-hoc color values. Use
 
 Kite uses **declarative hash-based routing** in native HTML:
 
-| Path     | View Target  | Description   |
-| -------- | ------------ | ------------- |
-| `/`      | `home-view`  | Home page     |
-| `/about` | `about-view` | About Us page |
+| Path     | View Target  | Description           |
+| -------- | ------------ | --------------------- |
+| `/`      | `home-view`  | Home page             |
+| `/about` | `about-view` | About Us page         |
+| `/story` | `story-view` | Our Story origin page |
 
 ## Local Development
 

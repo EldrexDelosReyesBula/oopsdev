@@ -4,7 +4,7 @@
     <header
       class="glass-nav sticky top-0 z-30 border-b border-border/40 transition-all duration-300"
     >
-      <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <div class="section-shell flex h-20 items-center justify-between">
         <a
           href="#/"
           aria-label="Oops.dev home"
@@ -12,23 +12,105 @@
         >
           <img
             src="/oops-logo.svg"
-            alt="Oops logo"
-            class="h-8 w-8 object-contain transition-transform duration-300 group-hover:rotate-6"
+            alt="Oops.dev logo"
+            href="/"
+            class="h-10 w-10 object-contain transition-transform duration-300 group-hover:rotate-6"
           />
-          <span class="text-xl font-black tracking-tight"
-            >Oops<span class="text-primary font-mono text-base">.dev</span></span
+          <span class="text-2xl font-black tracking-tight text-foreground"
+            >Oops<span class="text-primary font-mono text-xl">.dev</span></span
           >
         </a>
-        <a
-          href="#/"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-xs font-bold cursor-pointer transition-all duration-200 border border-input bg-background/80 px-4 py-2 shadow-xs hover:bg-muted hover:border-foreground/30 hover:-translate-y-0.5 active:translate-y-0"
-        >
-          <i class="ph-duotone ph-arrow-left text-sm text-primary"></i>
-          Back to Home
-        </a>
-      </div>
-    </header>
 
+        <nav
+          class="hidden items-center gap-8 text-sm font-bold md:flex"
+          aria-label="Main navigation"
+        >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#how"
+            >How it works</a
+          >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#/story"
+            >Our Story</a
+          >
+          <a
+            class="relative text-foreground/80 hover:text-primary transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-200"
+            href="#/about"
+            >About Us</a
+          >
+          <a href="mailto:hello@oops.dev" class="btn-rescue h-10 rounded-xl px-5 text-sm shadow-md">
+            Let's talk
+            <i
+              class="ph-duotone ph-arrow-right text-base transition-transform duration-200 group-hover:translate-x-1"
+            ></i>
+          </a>
+        </nav>
+
+        <button
+          class="grid size-11 place-items-center rounded-xl border border-border/80 bg-background/50 hover:bg-muted text-foreground transition-all duration-200 md:hidden cursor-pointer"
+          kite-on-click="menuOpen = !menuOpen"
+          aria-label="Toggle navigation"
+          kite-bind:aria-expanded="menuOpen"
+        >
+          <i
+            class="ph-duotone ph-list text-2xl transition-transform duration-200"
+            kite-class:rotate-90="menuOpen"
+          ></i>
+        </button>
+      </div>
+
+      <!-- Mobile dropdown with slide-down animation -->
+      <nav
+        class="mx-4 mb-4 grid gap-3 rounded-2xl border border-border/60 bg-background/95 p-6 shadow-xl backdrop-blur-xl md:hidden transition-all duration-300"
+        kite-show="menuOpen"
+      >
+        <a
+          href="#services"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          Services
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="#how"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          How it works
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="#/story"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          Our Story
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="#/about"
+          kite-on-click="menuOpen = false"
+          class="flex items-center justify-between text-base font-semibold hover:text-primary py-2 border-b border-border/30"
+        >
+          About Us
+          <i class="ph-duotone ph-caret-right text-sm text-muted-foreground"></i>
+        </a>
+        <a
+          href="mailto:hello@oops.dev"
+          class="btn-rescue h-11 w-full rounded-xl text-center font-bold mt-2"
+        >
+          Let's talk <i class="ph-duotone ph-arrow-right text-base ml-1"></i>
+        </a>
+      </nav>
+    </header>
     <!-- Hero -->
     <section class="bg-foreground py-20 text-background sm:py-24 relative overflow-hidden">
       <div
@@ -67,132 +149,36 @@
       </div>
     </section>
 
-    <!-- Our Story -->
-    <section class="py-20 sm:py-28 relative">
+    <!-- Origin Story Banner Link -->
+    <section class="py-12 border-b border-border/50 bg-background/50">
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="text-center">
-          <p class="font-bold uppercase tracking-widest text-primary">Our Story</p>
-          <h2 class="mt-3 text-4xl font-black sm:text-5xl tracking-tight">
-            The Stories That Started It All
-          </h2>
-          <p class="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-            We did not have to look far to find the problem. We found it right in front of us.
-          </p>
-        </div>
-        <div class="mt-12 grid gap-8 lg:grid-cols-2">
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-border/80 bg-background p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 hover:border-primary/30"
-          >
-            <div class="flex items-center gap-3">
-              <div
-                class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary shadow-xs"
-              >
-                <i class="ph-duotone ph-buildings text-2xl"></i>
-              </div>
-              <h3 class="text-2xl font-extrabold tracking-tight">The Municipal Office</h3>
-            </div>
-            <div class="mt-6 space-y-4 text-sm leading-7 text-muted-foreground">
-              <div>
-                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
-                  The Task
-                </p>
-                <p>
-                  Manually transfer information from hundreds of old logbooks into new handwritten
-                  ledgers.
-                </p>
-              </div>
-              <div>
-                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
-                  The Reality
-                </p>
-                <p>
-                  It was tedious, slow, and prone to errors. A single mistake meant starting over.
-                  Weeks of work could have been reduced to days with the right digital tools.
-                </p>
-              </div>
-            </div>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-3xl border border-border/80 bg-muted/40 p-6 sm:p-8 backdrop-blur-xs shadow-xs"
+        >
+          <div class="flex items-center gap-4">
             <div
-              class="mt-6 flex items-center gap-2.5 rounded-xl bg-primary/10 px-5 py-4 text-primary font-bold text-sm"
+              class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-xs"
             >
-              <i class="ph-duotone ph-sparkle text-lg shrink-0"></i>
-              <span>Our Realization: There has to be a better way.</span>
+              <i class="ph-duotone ph-book-open-text text-3xl"></i>
             </div>
-          </article>
-
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-border/80 bg-background p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 hover:border-primary/30"
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider text-primary">Origin Story</p>
+              <h3 class="text-xl sm:text-2xl font-black text-foreground tracking-tight">
+                The Stories That Started It All
+              </h3>
+              <p class="text-sm text-muted-foreground mt-1">
+                Read how our experiences in a Municipal Office and Electronics Shop inspired the
+                Oops.dev rescue mission.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#/story"
+            class="btn-navy-outline shrink-0 rounded-2xl px-6 py-3 text-sm font-bold flex items-center gap-2"
           >
-            <div class="flex items-center gap-3">
-              <div
-                class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary shadow-xs"
-              >
-                <i class="ph-duotone ph-storefront text-2xl"></i>
-              </div>
-              <h3 class="text-2xl font-extrabold tracking-tight">The Electronics Shop</h3>
-            </div>
-            <div class="mt-6 space-y-4 text-sm leading-7 text-muted-foreground">
-              <div>
-                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
-                  The Task
-                </p>
-                <p>
-                  Prepare the annual profit report by reading through approximately 50 handwritten
-                  record books of daily sales and operations.
-                </p>
-              </div>
-              <div>
-                <p class="mb-1 text-xs font-bold uppercase tracking-wider text-foreground">
-                  The Reality
-                </p>
-                <p>
-                  It took days to compile. The risk of calculation errors was high. The owner could
-                  not make quick business decisions because the data was buried in paper.
-                </p>
-              </div>
-            </div>
-            <div
-              class="mt-6 flex items-center gap-2.5 rounded-xl bg-primary/10 px-5 py-4 text-primary font-bold text-sm"
-            >
-              <i class="ph-duotone ph-sparkle text-lg shrink-0"></i>
-              <span
-                >Our Realization: Business owners need instant access to their own data, not hours
-                of manual searching.</span
-              >
-            </div>
-          </article>
-        </div>
-
-        <div class="mt-12 rounded-3xl border border-border/80 bg-muted/60 p-8 sm:p-10 shadow-xs">
-          <h3 class="text-2xl font-black tracking-tight">What These Stories Taught Us</h3>
-          <ul class="mt-6 space-y-3.5">
-            <li class="flex items-start gap-3.5 text-base leading-7 text-muted-foreground">
-              <i class="ph-duotone ph-check-circle text-secondary text-xl shrink-0 mt-0.5"></i>
-              <span
-                ><strong class="text-foreground">Manual processes waste time and money.</strong>
-                Repetitive physical record keeping consumes productive business hours.</span
-              >
-            </li>
-            <li class="flex items-start gap-3.5 text-base leading-7 text-muted-foreground">
-              <i class="ph-duotone ph-check-circle text-secondary text-xl shrink-0 mt-0.5"></i>
-              <span
-                ><strong class="text-foreground">Errors are inevitable</strong> when humans do
-                repetitive handwriting and calculations without validation.</span
-              >
-            </li>
-            <li class="flex items-start gap-3.5 text-base leading-7 text-muted-foreground">
-              <i class="ph-duotone ph-check-circle text-secondary text-xl shrink-0 mt-0.5"></i>
-              <span
-                ><strong class="text-foreground">Owners hold on to manual systems</strong> because
-                they are afraid of losing decades of irreplaceable historical data.</span
-              >
-            </li>
-          </ul>
-          <blockquote class="mt-8 border-l-4 border-primary pl-6">
-            <p class="text-xl sm:text-2xl font-black text-foreground">
-              &ldquo;We do not just need to digitalize. We need to
-              <span class="text-primary">rescue.</span>&rdquo;
-            </p>
-          </blockquote>
+            Read Our Story
+            <i class="ph-duotone ph-arrow-right text-base"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -558,11 +544,12 @@
         >
           <!-- Left card (-1 offset) -->
           <div
-            class="relative z-0 w-40 sm:w-52 overflow-hidden rounded-3xl opacity-50 transition-all duration-500 scale-95 hover:opacity-75 cursor-pointer"
+            class="relative z-0 w-40 sm:w-52 overflow-hidden rounded-3xl opacity-50 transition-all duration-500 scale-95 hover:opacity-75 cursor-pointer bg-muted/30"
             style="aspect-ratio: 3 / 4"
             kite-on-click="prev()"
           >
             <img
+              src="/eldrexbula.png"
               kite-bind:src="getMember(-1).image"
               kite-bind:alt="getMember(-1).name"
               class="h-full w-full object-cover"
@@ -571,10 +558,11 @@
 
           <!-- Center card (0 offset) -->
           <div
-            class="relative z-10 w-56 sm:w-68 overflow-hidden rounded-3xl shadow-2xl ring-4 ring-primary/30 transition-all duration-500 scale-100"
+            class="relative z-10 w-56 sm:w-68 overflow-hidden rounded-3xl shadow-2xl ring-4 ring-primary/30 transition-all duration-500 scale-100 bg-muted/40"
             style="aspect-ratio: 3 / 4"
           >
             <img
+              src="/eldrexbula.png"
               kite-bind:src="getMember(0).image"
               kite-bind:alt="getMember(0).name"
               class="h-full w-full object-cover"
@@ -582,21 +570,23 @@
             <div
               class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-6 pb-6 pt-12"
             >
-              <p
-                class="text-xl font-black text-white tracking-tight"
-                kite-text="getMember(0).name"
-              ></p>
-              <p class="text-sm font-semibold text-sand" kite-text="getMember(0).role"></p>
+              <p class="text-xl font-black text-white tracking-tight" kite-text="getMember(0).name">
+                Eldrex Delos Reyes Bula
+              </p>
+              <p class="text-sm font-semibold text-sand" kite-text="getMember(0).role">
+                CEO &amp; Founder
+              </p>
             </div>
           </div>
 
           <!-- Right card (1 offset) -->
           <div
-            class="relative z-0 w-40 sm:w-52 overflow-hidden rounded-3xl opacity-50 transition-all duration-500 scale-95 hover:opacity-75 cursor-pointer"
+            class="relative z-0 w-40 sm:w-52 overflow-hidden rounded-3xl opacity-50 transition-all duration-500 scale-95 hover:opacity-75 cursor-pointer bg-muted/30"
             style="aspect-ratio: 3 / 4"
             kite-on-click="next()"
           >
             <img
+              src="/eldrexbula.png"
               kite-bind:src="getMember(1).image"
               kite-bind:alt="getMember(1).name"
               class="h-full w-full object-cover"
@@ -605,15 +595,12 @@
         </div>
 
         <!-- Dot indicators with smooth spring widths -->
-        <div class="mt-8 flex justify-center gap-2.5">
+        <div class="mt-8 flex justify-center items-center gap-2.5">
           <button
             kite-for="(m, i) in members"
             kite-bind:aria-label="'Go to member ' + (i + 1)"
-            kite-class:w-8="i === active"
-            kite-class:opacity-100="i === active"
-            kite-class:w-3="i !== active"
-            kite-class:opacity-30="i !== active"
-            class="h-3 rounded-full bg-primary transition-all duration-300 hover:scale-110 cursor-pointer"
+            kite-class:active="i === active"
+            class="carousel-dot"
             kite-on-click="setActive(i)"
           ></button>
         </div>
@@ -691,13 +678,100 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-border py-8 text-center text-xs text-muted-foreground">
-      &copy; 2026 Oops.dev. All rights reserved.
-      <span class="mx-2 opacity-40">&middot;</span>
-      <a href="#/" class="hover:text-foreground font-semibold hover:underline transition-colors"
-        >Home</a
+    <!-- Site Footer -->
+    <footer class="border-t border-background/15 bg-foreground py-14 text-background">
+      <div class="section-shell grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="#/" aria-label="Oops.dev home" class="flex items-center gap-2">
+            <img
+              src="/oops-logo.svg"
+              alt="Oops logo"
+              class="h-9 w-9 object-contain brightness-0 invert"
+            />
+            <span class="text-2xl font-black tracking-tight text-background">Oops</span>
+          </a>
+          <p class="mt-4 font-bold text-background/70">Rescue. Digitalize. Keep.</p>
+        </div>
+
+        <div>
+          <p class="font-display font-extrabold text-sm uppercase tracking-wider text-sand">
+            Explore
+          </p>
+          <nav class="mt-4 grid gap-2.5 text-sm text-background/75 font-medium">
+            <a
+              href="#/"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Services</a
+            >
+            <a
+              href="#how"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >How it works</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Contact</a
+            >
+            <a
+              href="#/story"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >Our Story</a
+            >
+            <a
+              href="#/about"
+              class="hover:text-background hover:translate-x-1 transition-all duration-200"
+              >About Us</a
+            >
+          </nav>
+        </div>
+
+        <div>
+          <p class="font-display font-extrabold text-sm uppercase tracking-wider text-sand">
+            Say hello
+          </p>
+          <a
+            class="mt-4 block text-sm text-background/75 hover:text-background hover:underline font-medium"
+            href="mailto:hello@oops.dev"
+            >hello@oops.dev</a
+          >
+          <p class="mt-2 text-sm text-background/75">Philippines</p>
+          <div class="mt-5 flex gap-3">
+            <a
+              aria-label="Facebook"
+              href="#"
+              class="grid size-10 place-items-center rounded-xl bg-background/10 text-background/75 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
+            >
+              <i class="ph-duotone ph-facebook-logo text-xl"></i>
+            </a>
+            <a
+              aria-label="Instagram"
+              href="#"
+              class="grid size-10 place-items-center rounded-xl bg-background/10 text-background/75 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
+            >
+              <i class="ph-duotone ph-instagram-logo text-xl"></i>
+            </a>
+            <a
+              aria-label="LinkedIn"
+              href="#"
+              class="grid size-10 place-items-center rounded-xl bg-background/10 text-background/75 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
+            >
+              <i class="ph-duotone ph-linkedin-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="section-shell mt-12 border-t border-background/15 pt-6 text-xs text-background/55"
       >
+        © 2026 Oops.dev. All rights reserved.
+      </div>
     </footer>
   </div>
 </kite-view>
