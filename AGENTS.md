@@ -1,6 +1,6 @@
 # Agent Guidelines — Digital Rescue Crew
 
-This project is a **Kite MVCR** web application for [Oops.dev](https://oops.dev),
+This project is a **Kite MVCR** web application for Oops[.]dev ([https://oopsdev.vercel.app/](https://oopsdev.vercel.app/)),
 an academic **Technopreneurship** project under the **Associate in Information Systems (AIS)**
 curriculum in the Philippines.
 

@@ -19,8 +19,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Overhauled `README.md` to professional enterprise architecture specification standards, removing classroom guide templates in favor of executive capability tables, architecture maps, and command references.
+- Migrated `LICENSE` to clean Markdown (`LICENSE.md`) declaring full proprietary copyright, AIS Technopreneurship academic scope, and third-party attributions.
+- Defanged domain references across all documentation to `Oops[.]dev` to prevent unwanted auto-linking, pointing canonical deployment directly to `https://oopsdev.vercel.app/`.
 - Updated student curriculum information across all views and models to **Associate in Information Systems (AIS)**.
-- Established proprietary copyright license (`LICENSE`, `package.json`), explicitly declaring original academic intellectual property and prohibiting unauthorized startup or commercial use without written permission.
+- Established proprietary copyright license (`LICENSE.md`, `package.json`), explicitly declaring original academic intellectual property and prohibiting unauthorized startup or commercial use without written permission.
 - Added academic Technopreneurship disclosures across site footers, `README.md`, `AGENTS.md`, and `LICENSE`.
 - Added image attribution to [David](https://ph.pinterest.com/get_stuff000/) via [Barron's](https://www.barrons.com/articles/here-are-5-tax-moves-to-consider-for-an-unusual-year-51606496167) for the story illustration in `home.view.html`, `story.view.html`, and `README.md`.
 - Transformed `#stories` section on home page into a single high-impact card structure featuring `60384c907ba3b44d940082be69926ee1.jpg` and a centered "Read Story" CTA button, matching wireframe specifications.

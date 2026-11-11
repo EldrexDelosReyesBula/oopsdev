@@ -30,7 +30,7 @@
 ## 4. Skills to Apply
 
 - **HCI / UX**: Clear visual hierarchy, accessible contrast, responsive layout across mobile and desktop
-- **Design System Fidelity**: Exact preservation of Oops.dev palette (Rescue Red, Digital Teal, Trust Navy, Paper White, Warm Sand)
+- **Design System Fidelity**: Exact preservation of Oops[.]dev palette (Rescue Red, Digital Teal, Trust Navy, Paper White, Warm Sand)
 - **Zero-eval Expression Safety**: Using Kite's safe expression engine for data binding and event handlers
 - **Performance**: Sub-second dev start and production builds under 350ms
 
