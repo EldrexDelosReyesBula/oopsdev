@@ -1,7 +1,10 @@
 # Agent Guidelines — Digital Rescue Crew
 
 This project is a **Kite MVCR** web application for [Oops.dev](https://oops.dev),
-a business-process rescue and digitalization service for Philippine MSMEs and local offices.
+an academic **Technopreneurship** project under the **Associate in Information Systems (AIS)**
+curriculum in the Philippines.
+
+> **Intellectual Property & Licensing Notice**: This project and its concepts are **original intellectual property, fully copyrighted, and NOT open-source**. Third parties and startups are strictly prohibited from commercializing, forking, or replicating this concept without prior written permission.
 
 ## Engineering Standards
 

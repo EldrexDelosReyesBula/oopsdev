@@ -267,9 +267,42 @@ index.html        Main entry shell with Kite configuration, models, routes, outl
 app/
   routes/         Route declarations (routes.html)
   models/         State models (team.model.html)
-  views/          Screen view templates (home.view.html, about.view.html)
+  views/          Screen view templates (home.view.html, about.view.html, story.view.html)
 src/
   styles.css      Design tokens, Tailwind v4 theme, and button utilities
 public/           Static assets served directly (logos, team photos, favicon)
 vite.config.ts    Vite 8 build configuration with Tailwind CSS v4 & Kite include plugin
 ```
+
+---
+
+## Academic Disclosure & Technopreneurship Scope
+
+This project is an **original academic work** developed as part of the **Technopreneurship** curriculum by students in the **Associate in Information Systems (AIS)** program in the Philippines.
+
+- **Purpose**: Academic evaluation, conceptual demonstration, and real-world system design for business process rescue and legacy data preservation.
+- **Academic Program**: Associate in Information Systems (AIS)
+- **Course**: Technopreneurship
+
+---
+
+## Intellectual Property, Copyright & Proprietary License
+
+**Copyright © 2026 Eldrex Delos Reyes Bula & Oops.dev Team. All Rights Reserved.**
+
+> [!IMPORTANT]
+> **THIS REPOSITORY AND CONCEPT ARE STRICTLY PROPRIETARY AND NOT OPEN SOURCE.**
+>
+> The concepts, branding, workflows, slogans (_"We Fix Your Oops"_, _"Rescue. Digitalize. Keep."_), and architecture of **Oops.dev / Digital Rescue Crew** are original intellectual property.
+>
+> **No individual, business entity, commercial organization, or startup is permitted to copy, fork, reproduce, or commercialize this concept, methodology, or code to launch a startup or service without prior express written and signed permission from the copyright holders.**
+
+For academic verification or licensing inquiries, contact: `hello@oops.dev` / `eldrexdelosreyesbula@gmail.com`.
+
+---
+
+## Asset Attributions
+
+- **Origin Story Illustration**: Artwork by [David](https://ph.pinterest.com/get_stuff000/), originally published via [Barron's](https://www.barrons.com/articles/here-are-5-tax-moves-to-consider-for-an-unusual-year-51606496167). Used strictly for educational, non-commercial academic demonstration with attribution.
+- **Icons**: [Phosphor Duotone Icons](https://phosphoricons.com) (MIT License).
+- **Frontend Framework**: [Kite](https://esm.sh/@kitelet/core) (MIT License).

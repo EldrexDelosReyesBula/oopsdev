@@ -25,7 +25,7 @@
 - **Glossary**:
   - **MSME**: Micro, Small, and Medium Enterprises in the Philippines
   - **LGU**: Local Government Unit
-  - **BSIS**: Bachelor of Science in Information Systems
+  - **AIS**: Associate in Information Systems
 
 ## 4. Skills to Apply
 
